@@ -1,0 +1,21 @@
+import { useState } from "react";
+
+import "./ExpenseItem.css";
+import ExpenseDate from "./ExpenseDate";
+import Card from "../UI/Card";
+
+const ExpenseItem = (props) => {
+  // const [title, SetTitle] = useState(props.title);
+  const { amount, date } = props;
+  return (
+    <Card className="expense-item">
+      <ExpenseDate date={date} />
+      <div className="expense-item__description">
+        <h2>hi</h2>
+        <div className="expense-item__price">${amount}</div>
+      </div>
+    </Card>
+  );
+};
+
+export default ExpenseItem;
